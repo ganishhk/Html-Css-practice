@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website-with-Ganish</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <style>
+        :root {
+            --color: #1f7a4d;
+            /* primary green */
+            --seccolor: #e6f4ea;
+            /* light green background */
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            border: none;
+            background-color: var(--color);
+            position: sticky;
+            width: auto;
+            height: auto;
+
+        }
+
+        .navlinks {
+            list-style: none;
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+        }
+
+        .link {
+            padding: 8px 8px;
+            font-size: 19px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none
+        }
+
+        a:hover {
+            background-color: #bfe3cf;
+            ;
+            padding: 8px 8px;
+            border-radius: 20px;
+        }
+
+        body {
+            background-color: var(--seccolor);
+
+        }
+
+        .boxes {
+            background-color: var(--seccolor);
+            /* padding:150px 394px; */
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+
+            /* padding: 80px 0px;
+            margin: 44px 0px */
+        }
+
+        .box {
+            border: 2px solid #1f7a4d;
+            background-color: white;
+            padding: 77px 92px;
+            /* margin: 2px 38px; */
+            border-radius: 18px;
+        }
+
+        input {
+            display: block;
+            padding: 18px 20px;
+            border-radius: 29px;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .box2 {
+            /* margin: 2px; */
+            border: 2px solid #1f7a4d;
+            background-color: white;
+            padding: 117px 92px;
+            /* margin: 2px 436px; */
+            border-radius: 18px;
+
+        }
+
+        label {
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .box form:nth-child(4) p {
+            padding: 12px 2px;
+            font-size: large;
+            font-weight: bold;
+
+        }
+
+        .but {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 35px;
+            color: var(--color);
+            background-color: var(--seccolor);
+            border: none;
+            cursor: pointer;
+        }
+
+        .but:hover {
+            background-color: #155c3a;
+        }
+
+        .box h3 {
+            text-align: center;
+            margin-top: -40px;
+            margin-bottom: 30px;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+
+        .box2 h3 {
+            text-align: center;
+            margin-top: -40px;
+            margin-bottom: 30px;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+
+        .material {
+            text-align: center;
+            border: none;
+            padding: 80px 20px;
+            background-color: #1f7a4d;
+            font-size: larger;
+            font-weight: bolder;
+            color: rgb(254, 255, 255);
+        }
+
+        footer {
+            background-color: #0f3d2e;
+            color: #d9f2e6;
+        }
+
+        .social:first-child {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 30px 95px;
+        }
+
+        .copy {
+            display: flex;
+            text-align: left;
+            justify-content: flex-start;
+        }
+
+        .circle {
+            border: 2px solid red;
+            width: 125px;
+            height: 90px;
+            background-color: #e63946;
+            border-radius: 100px;
+            position: fixed;
+            bottom: 1px;
+            right: 1px;
+            text-align: center;
+            font-size: larger;
+            color: white;
+
+        }
+
+        #female,
+        #male {
+            display: inline;
+        }
+
+        .social {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<div class="navbar">
+    <ul class="navlinks">
+        <li class="link"><a href="">details</a></li>
+        <li class="link"><a href="">Contact us</a></li>
+        <li class="link"> <a href="">Home</a></li>
+    </ul>
+</div>
+
+<body>
+    <header class="boxes">
+        <div class="box">
+            <h3>Sign up</h3>
+            <form action="#" method="post">
+                <label for="username"> User Name</label>
+                <input type="text" name="username" id="username" placeholder="Enter your full name ">
+            </form>
+            <form action="" method="post">
+                <label for="Age">Age</label>
+                <input type="text" name="Age" id="Age" placeholder="Enter you Age">
+            </form>
+            <form action="#" method="post">
+                <p>Gender</p>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </form>
+            <button class="but"> Submit
+            </button>
+        </div>
+        <div class="box2">
+            <h3>login</h3>
+            <label for="username2">Username</label>
+            <form action="#" method="post">
+                <input type="text" name="usernameoremail" id="username2" placeholder="Enter Your Username">
+            </form>
+            <label for="password"> Password</label>
+            <form action="#" method="post">
+                <input type="password" name="password" id="password" placeholder="Password">
+            </form>
+            <button class="but">Submit</button>
+        </div>
+    </header>
+    <main class="material">
+        <h1>Welcome to our Website</h1>
+    </main>
+</body>
+<footer>
+    <div class="social">
+        <ul>
+            <li>instagram</li>
+            <li>facebook</li>
+            <li>snap chat</li>
+            <li>X</li>
+            <li>linkdin</li>
+        </ul>
+        <p class="copy ">&copy; Copy Right</p>
+        <!-- and copy right is not going left side  -->
+    </div>
+</footer>
+<div class="circle">GG</div>
+
+</html>
