@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --color: rgb(19, 247, 95);
+        }
+
+        .container {
+            background-color: rgb(19, 247, 95);
+            display: flex;
+            height: 5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            gap: 5px;
+
+        }
+
+        .wblogo {
+            width: 5rem;
+            height: auto;
+            padding: 10px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            gap: 20px 15px;
+        }
+
+        .navlink {
+            margin: 5px;
+            display: flex;
+            padding: 12px;
+            text-decoration: none;
+            padding: 10px 15px;
+            color: white;
+        }
+        .navlink:hover{
+            transform: scale(1.1);
+        }
+
+        .brand {
+            font-weight: bolder;
+            font-size: x-large;
+            display: flex;
+            color: black;
+        }
+
+        .navlink:hover {
+            background-color: green;
+            border-radius: 20px;
+            color: greenyellow;
+        }
+
+        .home-page {
+            display: flex;
+            align-items: center;
+            padding: 0%;
+            gap: 5px;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: rgba(170, 255, 153, 0.726);
+        }
+    </style>
+    <style>
+
+        .card {
+            border: 2px solid var(--color);
+            width: 22rem;
+            padding: 13px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            /* justify-content: center; */
+            background-color: rgba(255, 255, 255, 0.575);
+            border-radius: 20px;
+        }
+        .card:hover{
+            transform: scale(1.1);
+        }
+
+        .logoimg {
+            width: 20rem;
+            border-radius: 20px;
+        }
+        .logoimg:hover{
+            transform: scale(1.05);
+        }
+
+        .tag {
+            display: flex;
+            gap: 0.5rem;
+            padding: 5px 0px;
+        }
+        
+        .tags {
+            border: 1px solid rgba(128, 128, 128, 0.637);
+            padding: 5px 3px;
+            font-size: x-small;
+            font-weight: bolder;
+            border-radius: 20px;
+            background-color: rgba(185, 178, 178, 0.322);
+            text-decoration: none;
+            color: rgb(112, 148, 105);
+        }
+        
+        .tags:hover{
+            transform: scale(1.1);
+        }
+
+        .heading {
+            font-weight: bolder;
+            color: var(--color);
+            padding: 5px 0px;
+        }
+
+        .content {
+            font-size: medium;
+            padding: 5px 5px;
+        }
+
+        .but {
+            margin: 16px auto;
+            padding: 15px 20px;
+            background-color: var(--color);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 30px 0px;
+        }
+        .but:hover{
+            background-color: green;
+            color: greenyellow;
+            cursor: pointer;
+            transform: scale(0.9);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <div class="logo">
+            <a class="home-page" href="">
+                <img class="wblogo"
+                    src="https://static.vecteezy.com/system/resources/previews/011/757/356/large_2x/ue-u-e-letter-logo-design-initial-letter-ue-linked-circle-uppercase-monogram-logo-white-color-ue-logo-u-e-design-ue-u-e-vector.jpg"
+                    alt="">
+                <span class="brand">ur</span>
+                <span class="brand">engine</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <a class="navlink" href="">Product</a>
+            <a class="navlink" href="">Pricing</a>
+            <a class="navlink" href="">About us</a>
+        </nav>
+    </header>
+    <main class="container2">
+        <div class="card">
+            <div class="cardlogo">
+                <img class="logoimg"
+                    src="https://tse1.mm.bing.net/th/id/OIP.zR8HUq1tCZLU3LTqmV86HQHaEo?w=2560&h=1600&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="">
+            </div>
+            <div class="tag">
+                <a class="tags" href="">Nature</a>
+                <a class="tags" href="">Mountains</a>
+            </div>
+            <h1 class="heading">Japan</h1>
+            <p class="content">japan is best place to visit beautiful nature and everything there culture and everthing
+            </p>
+            <button class="but"> Submit</button>
+        </div>
+        <div class="card">
+            <div class="cardlogo">
+                <img class="logoimg" src="https://wallpaperaccess.com/full/2481093.jpg" alt="">
+            </div>
+            <div class="tag">
+                <a class="tags" href="">Culture</a>
+                <a class="tags" href="">Infrastructure</a>
+            </div>
+            <h1 class="heading">America</h1>
+            <p class="content">From mountains high to oceans wide,
+                America stands with strength and pride.
+                Stars and stripes forever wave,
+                A beacon of the brave and brave. </p>
+            <button class="but"> Submit</button>
+        </div>
+        <div class="card">
+            <div class="cardlogo">
+                <img class="logoimg"
+                    src="https://wallpaperaccess.com/full/1094080.jpg"
+                    alt="">
+            </div>
+            <div class="tag">
+                <a class="tags" href="">Nature</a>
+                <a class="tags" href="">Environment</a>
+            </div>
+            <h1 class="heading">Finland</h1>
+            <p class="content">"Finland is the land of a thousand lakes and the Northern Lights, with serene lakes, ancient forests, and the breathtaking spectacle of the Aurora Borealis dancing across the Arctic skies" 
+            </p>
+            <button class="but"> Submit</button>
+        </div>
+    </main>
+    <footer class="container3">
+    </footer>
+</body>
+
+</html>
