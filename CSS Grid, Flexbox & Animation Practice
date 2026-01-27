@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid, Flexbox & Animation Practice</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --colors: #ffd741;
+        }
+
+        .container {
+            border: 1px solid gray;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            margin: 0;
+            width: 100%;
+
+        }
+
+        .logoimg {
+            width: 9rem;
+            cursor: pointer;
+        }
+
+        .nav {
+            display: flex;
+
+        }
+
+        .navlink {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .navlink li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out 0.2s;
+        }
+
+        .navlink li:hover {
+            transform: scale(1.02);
+        }
+
+        .rightbox {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px
+        }
+
+        .rightbox li {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            cursor: pointer;
+        }
+
+        .download {
+            background-color: #ffd741;
+            padding: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out 0.2s;
+
+        }
+
+        .download:hover {
+            transform: scale(1.02);
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .upperbody {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+        }
+
+        .heading1 {
+            font-size: 45px;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+
+        .p {
+            margin: 50px auto;
+            animation: p 1s ease 0.7s infinite alternate;
+        }
+
+        .heading2 {
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+        }
+
+        .but {
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            padding: 1rem 0.5rem;
+            background-color: var(--colors);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        .but:hover {
+            transform: scale(1.03);
+            transition: transform 0.3s ease-in-out 0.2s;
+
+        }
+
+        .lastline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 1rem;
+            gap: 1rem;
+        }
+
+        .lowerbody {
+            width: 29rem;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0px auto;
+            padding: 2rem 7rem;
+            border-radius: 20px;
+            background-color: rgb(235, 233, 233);
+            transition: transform 0.3s ease-in-out 0.3s, background-color 0.8s ease 0.2s;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            row-gap: 10px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+        }
+
+        .lowerbody:hover {
+            transform: scale(1.03);
+        }
+
+        .cardbut {
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+            padding: 0.8rem 2rem;
+            background-color: var(--colors);
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out 0.3s, background-color 0.8s ease 0.2s;
+        }
+
+        .cardbut:hover {
+            transform: scale(1.02) scaleX(1.04);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container3 {
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .heading h1 {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .but svg {
+            display: flex;
+            align-items: center;
+        }
+
+        .card7 {
+            grid-column: 2/3;
+        }
+
+        .cardbut:hover {
+            background-color: #e2b101;
+        }
+        @keyframes p {
+            from{
+                
+            }
+            to{
+                transform: scale(1.2);
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <div class="logo">
+            <img class="logoimg" src="UE_Site-Logo.png" alt="">
+        </div>
+        <div class="nav">
+            <ul class="navlink">
+                <li>Product <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="18"
+                        color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" />
+                    </svg></li>
+                <li>Buy </li>
+                <li>Support <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="18"
+                        color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" />
+                    </svg></li>
+                <li>Learn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="18"
+                        color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" />
+                    </svg></li>
+                <li>Company <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="18"
+                        color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" />
+                    </svg></li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul class="rightbox">
+                <li class="download">Download</li>
+                <li> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 12C8 18 12 22 12 22C12 22 16 18 16 12C16 6 12 2 12 2C12 2 8 6 8 12Z" />
+                        <path d="M21 15H3" />
+                        <path d="M21 9H3" />
+                    </svg> English</li>
+                <li></li>
+            </ul>
+        </div>
+    </header>
+    <main class="container2">
+        <div class="upperbody">
+            <div class="heading">
+                <h1 class="heading1"> Download UltraEdit for Window <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" width="44" height="44" color="currentColor" fill="none" stroke="#141B34"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M13 3H11C7.22876 3 5.34315 3 4.17157 4.17157C3 5.34315 3 7.22876 3 11V13C3 16.7712 3 18.6569 4.17157 19.8284C5.34315 21 7.22876 21 11 21H13C16.7712 21 18.6569 21 19.8284 19.8284C21 18.6569 21 16.7712 21 13V11C21 7.22876 21 5.34315 19.8284 4.17157C18.6569 3 16.7712 3 13 3Z" />
+                        <path d="M12 3V21M3 12H21" />
+                    </svg></h1>
+            </div>
+            <div class="p">
+                <p class="heading2">
+                    Download and try UltraEdit before you buy it!
+                </p>
+                <p class="heading2">This download includes the full Windows version of the
+                    text editor</p>
+            </div>
+            <div class="butupper">
+                <button class="but">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="14" color="black"
+                        fill="none" stroke="#141B34" stroke-width="1" stroke-linejoin="round">
+                        <path d="M12 5.75C12 3.75 13.5 1.75 15.5 1.75C15.5 3.75 14 5.75 12 5.75Z" />
+                        <path
+                            d="M12.5 8.09001C11.9851 8.09001 11.5867 7.92646 11.1414 7.74368C10.5776 7.51225 9.93875 7.25 8.89334 7.25C7.02235 7.25 4 8.74945 4 12.7495C4 17.4016 7.10471 22.25 9.10471 22.25C9.77426 22.25 10.3775 21.9871 10.954 21.7359C11.4815 21.5059 11.9868 21.2857 12.5 21.2857C13.0132 21.2857 13.5185 21.5059 14.046 21.7359C14.6225 21.9871 15.2257 22.25 15.8953 22.25C17.2879 22.25 18.9573 19.8992 20 16.9008C18.3793 16.2202 17.338 14.618 17.338 12.75C17.338 11.121 18.2036 10.0398 19.5 9.25C18.5 7.75 17.0134 7.25 15.9447 7.25C14.8993 7.25 14.2604 7.51225 13.6966 7.74368C13.2514 7.92646 13.0149 8.09001 12.5 8.09001Z" />
+                    </svg> Download Mac or Linux version
+                </button>
+            </div>
+            <div class="lastline">
+                <img class="logoimg2"
+                    src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white_bkg_256x256-3-1.png"
+                    alt="">
+                <h3 class="lastline1">Download UltraEdit</h3>
+                <p class="lastline2">v2025.1 (released 2025-12-11) | Latest changes </p>
+            </div>
+            <div class="container3">
+                <div class="lowerbody card1">
+                    <div class="card">
+                        <h2 class="cards content1">English</h2>
+                        <h3 class="cards content2">Includes all language</h3>
+                        <button class="cardbut"> <a href="GettyRF_752121757.avif">Download 64-bit </a></button>
+                    </div>
+                </div>
+                <div class="lowerbody card2">
+                    <div class="card">
+                        <h2 class="cards content1">English</h2>
+                        <h3 class="cards content2">Includes all language</h3>
+                        <button class="cardbut"> <a href="GettyRF_752121757.avif">Download 64-bit </a></button>
+                    </div>
+                </div>
+                <div class="lowerbody card3">
+                    <div class="card">
+                        <h2 class="cards content1">English</h2>
+                        <h3 class="cards content2">Includes all language</h3>
+                        <button class="cardbut"> <a href="GettyRF_752121757.avif">Download 64-bit </a></button>
+                    </div>
+                </div>
+                <div class="lowerbody card4">
+                    <div class="card">
+                        <h2 class="cards content1">English</h2>
+                        <h3 class="cards content2">Includes all language</h3>
+                        <button class="cardbut"> <a href="GettyRF_752121757.avif">Download 64-bit </a></button>
+                    </div>
+                </div>
+                <div class="lowerbody card5">
+                    <div class="card">
+                        <h2 class="cards content1">English</h2>
+                        <h3 class="cards content2">Includes all language</h3>
+                        <button class="cardbut"> <a href="GettyRF_752121757.avif">Download 64-bit </a></button>
+                    </div>
+                </div>
+                <div class="lowerbody card6">
+                    <div class="card">
+                        <h2 class="cards content1">English</h2>
+                        <h3 class="cards content2">Includes all language</h3>
+                        <button class="cardbut"> <a href="GettyRF_752121757.avif">Download 64-bit </a></button>
+                    </div>
+                </div>
+                <div class="lowerbody card7">
+                    <div class="card ">
+                        <h2 class="cards content1">English</h2>
+                        <h3 class="cards content2">Includes all language</h3>
+                        <button class="cardbut"> <a href="GettyRF_752121757.avif">Download 64-bit </a></button>
+                    </div>
+                </div>
+            </div>
+    </main>
+</body>
+
+</html>
